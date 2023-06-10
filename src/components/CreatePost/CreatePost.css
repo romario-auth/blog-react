@@ -1,0 +1,48 @@
+.create-post {
+    display: flex;
+    justify-content: left;
+    background-color: white;
+    padding: 36px 64px;
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.create-post p {
+    text-align: right;
+    color: cadetblue;
+}
+
+.create-post h2 {
+    text-transform: uppercase;
+}
+
+.create-post h2 small {
+    text-transform: none;
+    color: blueviolet;
+}
+
+.create-post lable{
+    margin: 24px 0 8px 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+}
+
+
+.create-post input {
+    width: 100%;
+    box-shadow: 0px 10px 15px -4px rgba(0,0,0,0.1);
+    height: 30px;
+}
+
+.create-post button {
+    margin: 5px;
+}

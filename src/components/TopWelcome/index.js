@@ -1,6 +1,6 @@
 import './TopWelcome.css'
 
-function TopWelcome()
+const TopWelcome = () =>
 {
     return (
         <header className="title-blog">
