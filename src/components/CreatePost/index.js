@@ -9,7 +9,7 @@ const CreatePost = (props) => {
         setMessage(event.target.value);
     };
 
-    function codePost(min, max) {
+    function codePost() {
         let code = String(Math.random());
         return code.replace('0.', '');
     }
@@ -23,6 +23,9 @@ const CreatePost = (props) => {
 
                     <lable>Post Title:</lable>
                     <input onChange={handleChange} name="postTitle" placeholder={props.placeholder} />
+
+                    <lable>Post Image:</lable>
+                    <input onChange={handleChange} name="postImage" placeholder="Url from image" />
 
                     <lable>Write your post:</lable>
                     <textarea name="postContent" rows={4} cols={60} />
