@@ -1,0 +1,9 @@
+.drop-down {
+    float: right;
+    width: 180px;
+    margin: 5px;
+}
+
+.drop-down label {
+    display: inline;
+}

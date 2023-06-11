@@ -1,7 +1,8 @@
 import './CreatePost.css'
 import { useState } from 'react';
+import DropDown from '../DropDown/index';
 
-const CreatePost = (props) => {
+const CreatePost = () => {
 
     const [message, setMessage] = useState('');
 
@@ -9,25 +10,35 @@ const CreatePost = (props) => {
         setMessage(event.target.value);
     };
 
-    function codePost() {
-        let code = String(Math.random());
-        return code.replace('0.', '');
+    function codePost(title) {
+        let codePost = String(Math.random());
+        return title.replace(' ', '') + codePost.replace('0.', '');
     }
+
+    const language = [
+        'English',
+        'French',
+        'Portuguese',
+        'Spanish'
+    ]
 
     return (
         <div>
             <section className="create-post">
                 <form>
-                    <p>Post code: {codePost()}</p>
+                    <p>Post code: {codePost(message)}</p>
+
+                    <DropDown label="Language" language={language} />
+
                     <h2>Add New Post: <small>"{message}"</small></h2>
 
-                    <lable>Post Title:</lable>
-                    <input onChange={handleChange} name="postTitle" placeholder={props.placeholder} />
+                    <label>Post Title:</label>
+                    <input onChange={handleChange} name="postTitle" placeholder="Enter the post title" />
 
-                    <lable>Post Image:</lable>
+                    <label>Post Image:</label>
                     <input onChange={handleChange} name="postImage" placeholder="Url from image" />
 
-                    <lable>Write your post:</lable>
+                    <label>Write your post:</label>
                     <textarea name="postContent" rows={4} cols={60} />
 
                     <hr />

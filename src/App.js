@@ -5,11 +5,11 @@ function App() {
     return (
         <div className="App">
             <TopWelcome />
-            <div class="leftcolumn">
-                <CreatePost placeholder="Enter the post title" />
+            <div className="leftcolumn">
+                <CreatePost />
             </div>
 
-            <div class="rightcolumn">
+            <div className="rightcolumn">
                 <p>Infos about this:blog</p>
             </div>
 
