@@ -1,6 +1,7 @@
 import './CreatePost.css'
 import { useState } from 'react';
 import DropDown from '../DropDown/index';
+import Btn from '../Btn/Btn';
 
 const CreatePost = () => {
 
@@ -36,14 +37,20 @@ const CreatePost = () => {
                     <input onChange={handleChange} name="postTitle" placeholder="Enter the post title" />
 
                     <label>Post Image:</label>
-                    <input onChange={handleChange} name="postImage" placeholder="Url from image" />
+                    <input name="postImage" placeholder="Url from image" />
 
                     <label>Write your post:</label>
                     <textarea name="postContent" rows={4} cols={60} />
 
                     <hr />
-                    <button type="reset" className="button-4">Reset edits</button>
-                    <button type="submit" className="button-3">Save post</button>
+
+                    <Btn type="reset" className="button-4">
+                        Reset edits
+                    </Btn>
+
+                    <Btn type="submit" className="button-3">
+                        Save post
+                    </Btn>
                 </form>
             </section>
         </div>
