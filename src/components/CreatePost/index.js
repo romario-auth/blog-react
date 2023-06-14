@@ -5,11 +5,20 @@ import Btn from '../Btn/Btn';
 
 const CreatePost = () => {
 
-    const [message, setMessage] = useState('');
-
-    const handleChange = event => {
-        setMessage(event.target.value);
+    const [postLanguage, setPostLanguage] = useState('English');
+    const [postTitle, setPostTitle] = useState('');
+    const [postImage, setPostImage] = useState('http://');
+    const [postContent, setPostContent] = useState('Words just words');
+    
+    const handleChangePostTitle = event => {
+        setPostTitle(event.target.value);
     };
+    const handleChangePostImage = event => {
+        setPostImage(event.target.value)
+    }
+    const handleChangePostContent = event => {
+        setPostContent(event.target.value)
+    }
 
     function codePost(title) {
         let codePost = String(Math.random());
@@ -23,24 +32,36 @@ const CreatePost = () => {
         'Spanish'
     ]
 
+    const toSalve = (event) => {
+        event.preventDefault()
+
+        alert("Saving...\n\n" + postLanguage + '\n' + postTitle + '\n' + postImage + '\n' + postContent)
+    }
+
     return (
         <div>
             <section className="create-post">
-                <form>
-                    <p>Post code: {codePost(message)}</p>
+                <form onSubmit={toSalve}>
+                    <p>Post code: {codePost(postTitle)}</p>
 
-                    <DropDown label="Language" language={language} />
+                    <DropDown
+                        label="Language"
+                        language={language}
+                        requiredField="true"
+                        value={postLanguage}
+                        onChange={postLanguage => setPostLanguage(postLanguage)}
+                    />
 
-                    <h2>Add New Post: <small>"{message}"</small></h2>
+                    <h2>Add New Post: <small>"{postTitle}"</small></h2>
 
                     <label>Post Title:</label>
-                    <input onChange={handleChange} name="postTitle" placeholder="Enter the post title" />
+                    <input onChange={handleChangePostTitle} value={postTitle} placeholder="Enter the post title" required/>
 
                     <label>Post Image:</label>
-                    <input name="postImage" placeholder="Url from image" />
+                    <input onChange={handleChangePostImage} value={postImage} placeholder="Url from image" required />
 
                     <label>Write your post:</label>
-                    <textarea name="postContent" rows={4} cols={60} />
+                    <textarea onChange={handleChangePostContent} value={postContent} rows={4} cols={60} required/>
 
                     <hr />
 
