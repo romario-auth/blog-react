@@ -1,0 +1,26 @@
+.show-post {
+    display: block;
+    justify-content: left;
+    background-color: white;
+    padding: 36px 64px;
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.show-post h2 {
+    display: block;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+.show-post h5 {
+    display: block;
+    margin-top: 10px;
+}
+
+.show-post img
+{
+    width: 100%;
+}

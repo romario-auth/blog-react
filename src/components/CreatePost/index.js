@@ -1,7 +1,7 @@
 import './CreatePost.css'
 import { useState } from 'react';
-import DropDown from '../DropDown/index';
-import Btn from '../Btn/Btn';
+import DropDown from '../DropDown/';
+import Btn from '../Btn/';
 
 const CreatePost = (props) => {
 
