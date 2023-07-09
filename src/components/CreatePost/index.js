@@ -3,7 +3,7 @@ import { useState } from 'react';
 import DropDown from '../DropDown/index';
 import Btn from '../Btn/Btn';
 
-const CreatePost = () => {
+const CreatePost = (props) => {
 
     const [postLanguage, setPostLanguage] = useState('English');
     const [postTitle, setPostTitle] = useState('');
@@ -35,7 +35,12 @@ const CreatePost = () => {
     const toSalve = (event) => {
         event.preventDefault()
 
-        alert("Saving...\n\n" + postLanguage + '\n' + postTitle + '\n' + postImage + '\n' + postContent)
+        props.salvePost({
+            postLanguage,
+            postTitle,
+            postImage,
+            postContent
+        })
     }
 
     return (
@@ -47,7 +52,7 @@ const CreatePost = () => {
                     <DropDown
                         label="Language"
                         language={language}
-                        requiredField="true"
+                        requiredField={true}
                         value={postLanguage}
                         onChange={postLanguage => setPostLanguage(postLanguage)}
                     />
@@ -58,7 +63,7 @@ const CreatePost = () => {
                     <input onChange={handleChangePostTitle} value={postTitle} placeholder="Enter the post title" required/>
 
                     <label>Post Image:</label>
-                    <input onChange={handleChangePostImage} value={postImage} placeholder="Url from image" required />
+                    <input onChange={handleChangePostImage} value={postImage} placeholder="Url from image" required/>
 
                     <label>Write your post:</label>
                     <textarea onChange={handleChangePostContent} value={postContent} rows={4} cols={60} required/>

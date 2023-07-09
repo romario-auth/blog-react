@@ -1,12 +1,19 @@
+import { useState } from 'react';
 import CreatePost from './components/CreatePost/index';
 import TopWelcome from './components/TopWelcome/';
 
 function App() {
+
+    const [posts, setPosts] = useState([]);
+    const addPost = (post) => {
+        console.log(post);
+    }
+
     return (
         <div className="App">
             <TopWelcome />
             <div className="leftcolumn">
-                <CreatePost />
+                <CreatePost salvePost={ post => addPost(post)} />
             </div>
 
             <div className="rightcolumn">
