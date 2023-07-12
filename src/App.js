@@ -14,9 +14,8 @@ function App() {
         <div className="App">
             <TopWelcome />
             <div className="leftcolumn">
-                <CreatePost salvePost={post => addPost(post)} />
 
-                {posts.map( post =>
+                {posts.map(post =>
 
                     <ShowPost
                         postTitle={post.postTitle}
@@ -31,7 +30,7 @@ function App() {
             </div>
 
             <div className="rightcolumn">
-                <p>Infos about this:blog</p>
+                <CreatePost salvePost={post => addPost(post)} />
             </div>
 
         </div>

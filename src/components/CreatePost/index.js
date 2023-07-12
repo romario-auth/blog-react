@@ -71,7 +71,7 @@ const CreatePost = (props) => {
                     <input onChange={handleChangePostImage} value={postImage} placeholder="Url from image" required/>
 
                     <label>Write your post:</label>
-                    <textarea onChange={handleChangePostContent} value={postContent} rows={4} cols={60} required/>
+                    <textarea onChange={handleChangePostContent} value={postContent} rows={4} cols={58} required/>
 
                     <hr />
 
