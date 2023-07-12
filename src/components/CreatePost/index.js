@@ -4,10 +4,10 @@ import DropDown from '../DropDown/';
 import Btn from '../Btn/';
 
 const CreatePost = (props) => {
-
+    const imageDefault = 'https://picsum.photos/900/500';
     const [postLanguage, setPostLanguage] = useState('English');
     const [postTitle, setPostTitle] = useState('');
-    const [postImage, setPostImage] = useState('http://');
+    const [postImage, setPostImage] = useState(imageDefault);
     const [postContent, setPostContent] = useState('Words just words');
     
     const handleChangePostTitle = event => {
@@ -41,6 +41,11 @@ const CreatePost = (props) => {
             postImage,
             postContent
         })
+
+        setPostLanguage('English');
+        setPostTitle('');
+        setPostImage(imageDefault)
+        setPostContent('')
     }
 
     return (

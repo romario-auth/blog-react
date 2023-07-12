@@ -1,12 +1,12 @@
 import './ShowPost.css'
 
-const ShowPost = (props) => {
+const ShowPost = ({ postTitle, postLanguage, postCreated, postImage, postContent }) => {
     return (
         <section className="show-post">
-            <h2>{props.postTitle}</h2>
-            <h5>{props.postLanguage}, {props.postCreated}</h5>
-            <img src={props.postImage} alt={props.postTitle} />
-            <p>{props.postContent}</p>
+            <h2>{postTitle}</h2>
+            <h5>{postLanguage}, {postCreated}</h5>
+            <img src={postImage} alt={postTitle} />
+            <p>{postContent}</p>
         </section>
     )
 }

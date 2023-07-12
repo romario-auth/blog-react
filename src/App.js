@@ -7,7 +7,7 @@ function App() {
 
     const [posts, setPosts] = useState([]);
     const addPost = (post) => {
-        console.log(post);
+        setPosts([...posts, post])
     }
 
     return (
@@ -15,13 +15,19 @@ function App() {
             <TopWelcome />
             <div className="leftcolumn">
                 <CreatePost salvePost={post => addPost(post)} />
-                <ShowPost
-                    postTitle="My first post"
-                    postCreated="Dec 7, 2017"
-                    postLanguage="English"
-                    postImage="https://picsum.photos/id/237/900/500"
-                    postContent="Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
-                ></ShowPost>
+
+                {posts.map( post =>
+
+                    <ShowPost
+                        postTitle={post.postTitle}
+                        postCreated="Dec 7, 2017"
+                        postLanguage={post.postLanguage}
+                        postImage={post.postImage}
+                        postContent={post.postContent}
+                    ></ShowPost>
+
+                )}
+
             </div>
 
             <div className="rightcolumn">
