@@ -35,7 +35,7 @@ function App() {
 
             <div className="rightcolumn">
                 <CreatePost salvePost={post => addPost(post)} />
-                <Infos postCount={posts.length} lastPost={posts.sort(post => post.postCreatedAt)[0].postCreatedAt}></Infos>
+                <Infos postCount={posts.length} lastPost={posts.sort(post => post.postCreatedAt)[0]?.postCreatedAt}></Infos>
             </div>
 
         </div>

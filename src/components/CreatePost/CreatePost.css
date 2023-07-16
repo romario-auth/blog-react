@@ -9,6 +9,19 @@
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
+@media (max-width: 760px) {
+    .create-post {
+        display: block;
+        padding: 36px 30px;
+        width: 100%;
+    }
+
+    .create-post textarea {
+        height: 5em;
+        width: 100%;
+    }
+}
+
 .create-post p {
     text-align: right;
     color: cadetblue;

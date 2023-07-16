@@ -9,6 +9,12 @@
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
+@media (max-width: 760px) {
+    .show-post {
+        padding: 36px 30px;
+        width: 100%;
+    }
+}
 
 .show-post h2 {
     display: block;

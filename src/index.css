@@ -19,6 +19,19 @@ body {
     padding-left: 20px;
 }
 
+@media (max-width: 760px) {
+    .leftcolumn {
+        float: left;
+        width: 100%;
+    }
+
+    .rightcolumn {
+        float: left;
+        width: 100%;
+        padding-left: 0px;
+    }
+}
+
 .button-3 {
     appearance: none;
     background-color: #2ea44f;
