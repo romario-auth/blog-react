@@ -2,6 +2,8 @@ import { useState } from 'react';
 import CreatePost from './components/CreatePost/';
 import TopWelcome from './components/TopWelcome/';
 import ShowPost from './components/ShowPost'
+import Infos from './components/Infos/index';
+
 
 function App() {
 
@@ -33,6 +35,7 @@ function App() {
 
             <div className="rightcolumn">
                 <CreatePost salvePost={post => addPost(post)} />
+                <Infos postCount={posts.length} lastPost={posts.sort(post => post.postCreatedAt)[0].postCreatedAt}></Infos>
             </div>
 
         </div>
