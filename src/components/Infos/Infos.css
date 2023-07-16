@@ -1,0 +1,9 @@
+.infos {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.infos h3 {
+    text-decoration: underline;
+}
