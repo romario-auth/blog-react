@@ -18,11 +18,13 @@ function App() {
                 {posts.map(post =>
 
                     <ShowPost
+                        key={post.postId}
                         postTitle={post.postTitle}
-                        postCreated="Dec 7, 2017"
+                        postCreatedAt={post.postCreatedAt}
                         postLanguage={post.postLanguage}
                         postImage={post.postImage}
                         postContent={post.postContent}
+                        postId={post.postId}
                     ></ShowPost>
 
                 )}

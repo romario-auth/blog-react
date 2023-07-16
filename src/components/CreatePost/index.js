@@ -22,7 +22,7 @@ const CreatePost = (props) => {
 
     function codePost(title) {
         let codePost = String(Math.random());
-        return title.replace(' ', '') + codePost.replace('0.', '');
+        return title.replaceAll(' ', '') + codePost.replace('0.', '');
     }
 
     const language = [
@@ -32,6 +32,9 @@ const CreatePost = (props) => {
         'Spanish'
     ]
 
+    const postCreatedAt = new Date().toLocaleString()
+    const postId = codePost(postTitle)
+
     const toSalve = (event) => {
         event.preventDefault()
 
@@ -39,7 +42,9 @@ const CreatePost = (props) => {
             postLanguage,
             postTitle,
             postImage,
-            postContent
+            postContent,
+            postCreatedAt,
+            postId
         })
 
         setPostLanguage('English');
