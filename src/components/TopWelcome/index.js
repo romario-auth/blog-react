@@ -1,10 +1,10 @@
 import './TopWelcome.css'
 
-const TopWelcome = () =>
+const TopWelcome = ({ blogTitle }) =>
 {
     return (
         <header className="title-blog">
-            <h1>My Personal Blog</h1>
+            <h1>{blogTitle}</h1>
         </header>
     )
 }

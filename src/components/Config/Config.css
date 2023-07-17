@@ -1,0 +1,11 @@
+.config {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.config input {
+    width: 100%;
+    box-shadow: 0px 10px 15px -4px rgba(0,0,0,0.1);
+    height: 30px;
+}

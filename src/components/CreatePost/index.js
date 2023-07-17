@@ -79,11 +79,6 @@ const CreatePost = (props) => {
                     <textarea onChange={handleChangePostContent} value={postContent} rows={4} cols={58} required/>
 
                     <hr />
-
-                    <Btn type="reset" className="button-4">
-                        Reset edits
-                    </Btn>
-
                     <Btn type="submit" className="button-3">
                         Save post
                     </Btn>
