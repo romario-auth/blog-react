@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Config.css'
 
 const Config = (props) =>
@@ -12,6 +12,10 @@ const Config = (props) =>
             blogTitle: event.target.value
         })
     }
+
+    useEffect(() => {
+        document.title = blogTitle;
+    }, [blogTitle]);
 
     return (
         <div className="config">
