@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CreatePost from './components/CreatePost/';
 import TopWelcome from './components/TopWelcome/';
 import ShowPost from './components/ShowPost'
@@ -17,6 +17,19 @@ function App() {
     const changeBlogConfig = (config) => {
         setBlogTitle(config.blogTitle)
     }
+
+    const examplePost = {
+        postTitle: "About this blog",
+        postContent: "This is a blog for you to make your own blog. Set a title and create your post.",
+        postImage: "https://picsum.photos/id/155/900/500",
+        postLanguage: "English",
+        postCreatedAt: new Date("2023-07-16T00:00:00Z").toLocaleString(),
+        postId: "Aboutthisblog23748723478927232"
+    }
+
+    useEffect(() => {
+        addPost(examplePost)
+  },[]);
 
     return (
         <div className="App">
